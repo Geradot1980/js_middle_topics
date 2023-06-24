@@ -37,7 +37,7 @@ const person2 = {
 	name: 'Geradot',
 	age: 42,
 	sayHello: hello2,
-	//? bind() позволяет привязывать другой контекст
+	//todo bind() позволяет привязывать другой контекст
 	sayHelloWindow: hello2.bind(window),
 	logInfo: function () {
 		console.log(`Name is ${this.name}`)
@@ -56,8 +56,21 @@ const lena2 = {
 //
 person2.logInfo() // контекст person2
 person2.logInfo.bind(lena2)() // контекст lena2. bind() возвращает новую функцию поэтому нужно в конце поставить скобки
+//? Если у функции с привязанным контекстом есть параметры то их можно передать .bind(context)(params) или .bind(context, params)()
 
+//todo Метод call()
+// работает также как и bind но вызывает функцию сразу, а не возвращает новую функцию значит дополнительные скобки не нужны .call(context, params).
 
+//todo Метод apply()
+// всегда предаем 2 параметра в отличии от call. Второй параметр это массив из аргументов передающихся в функцию, а в call и bind параметры перечисляются через запятую.	.apply(context, [params]).
+
+//? Пример работы контекста и прототипов
+const array = [1, 2, 3, 4, 5]
+// реализовываем функцию которая будет умножать массив на заданное число через протатипы
+Array.prototype.multBy = function (n) {
+	return this.map(i => i * n)
+}
+console.log(array.multBy(5))
 //!
 {//
 }
