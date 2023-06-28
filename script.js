@@ -168,11 +168,11 @@ const person4 = {
 	country: 'Russia'
 }
 const { name, age, ...address } = person4
-// console.log(name, age, address) 
+// console.log(name, age, address)
 
 
 
-//!
+//! 5. Деструктуризациия 
 {//
 }
 
