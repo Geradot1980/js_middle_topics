@@ -117,7 +117,7 @@ inBy10() //30
  */
 
 //! 4. Все о Spread и Rest
-/* 
+
 const citiesRussia = ['Москва', 'Санкт-Петербург', 'Казань', 'Новосибирск']
 const citiesEurope = ['Берлин', 'Прага', 'Париж']
 
@@ -139,17 +139,16 @@ const citiesEuropeWithPopulation = {
 // 2. Объединение нескольких массивов/объектов в один
 // 3. Позволяет массивы передовать как последовательности
 // 4. С результатами querySelectorAll работать как с массивами Пример 43
-// 
 //console.log(citiesRussia) //-> ['Москва', 'Санкт-Петербург', 'Казань', 'Новосибирск']
 //console.log(...citiesRussia) // -> Москва Санкт-Петербург Казань Новосибирск
 
 //? Пример 41. Объединение массивов в один массив
 const allCities = [...citiesRussia, ...citiesEurope]
-console.log(allCities) //-> ['Москва', 'Санкт-Петербург', 'Казань', 'Новосибирск', 'Берлин', 'Прага', 'Париж']
+// console.log(allCities) //-> ['Москва', 'Санкт-Петербург', 'Казань', 'Новосибирск', 'Берлин', 'Прага', 'Париж']
 
 //? Пример 42. Работа с объектами
-console.log({ ...citiesRussiaWithPopulation }) // клон объекта
-console.log({ ...citiesRussiaWithPopulation, ...citiesEuropeWithPopulation }) // объединение объектов
+// console.log({ ...citiesRussiaWithPopulation }) // клон объекта
+// console.log({ ...citiesRussiaWithPopulation, ...citiesEuropeWithPopulation }) // объединение объектов
 
 //? Пример 43. С результатами querySelectorAll работать как с массивами
 const divs4 = document.querySelectorAll('div') // метода map нету
@@ -160,8 +159,7 @@ const numbers4 = [1, 2, 3, 4, 5, 6, 7]
 function sum4(a, b, ...rest) {
 	return a + b + rest.reduce((a, i) => a + i, 0)
 }
-console.log(sum4(...numbers4))
-
+// console.log(sum4(...numbers4))
 
 const person4 = {
 	name: 'Alex',
@@ -170,8 +168,8 @@ const person4 = {
 	country: 'Russia'
 }
 const { name, age, ...address } = person4
-console.log(name, age, address)
-*/
+// console.log(name, age, address) 
+
 
 
 //!
